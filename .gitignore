@@ -14,7 +14,7 @@
 /assets/js/
 /assets/images/
 /assets/cache/
-/assets/lib/
+
 /assets/backup/
 /assets/index.html
 /assets/snippets/
@@ -31,3 +31,12 @@
 /assets/modules/index.html
 /assets/modules/blang/version.php
 /assets/modules/evopack/
+/assets/lib/APIHelpers.class.php
+/assets/lib/Formatter/
+/assets/lib/class.summary.php
+/assets/lib/Module/
+/assets/lib/Helpers/
+/assets/lib/SimpleTab/
+/assets/lib/.htaccess
+/assets/lib/class.modxRTEbridge.php
+/assets/lib/MODxAPI/
