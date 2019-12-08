@@ -1,0 +1,1 @@
+<li ><span><a href="[+moduleurl+]action=paramForm&param=[+id+]">[+name+] <small>([+id+])</small></a></span></li>

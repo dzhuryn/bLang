@@ -1,0 +1,8 @@
+{
+  "yandexKey": {
+    "caption":"Yandex Translate Api Text"
+  },
+  "yadexn_lang_key": {
+    "caption":"Ключ языка для перевода, если онотличается в yandex api (ua==uk)"
+  }
+}
