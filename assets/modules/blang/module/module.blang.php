@@ -139,7 +139,7 @@ switch ($action) {
             foreach ($_POST as $name => $value) {
                 $name = $modx->db->escape($name);
                 $value = $modx->db->escape($value);
-                $old = $modx->db->getValue("select name from  " . $BS . " where name = '" . $name . "'");
+                $old = $modx->db->getValue($modx->db->select('count(*)', $BS, "name='{$name}'"));
                 $fields = [
                     'name' => $name,
                     'value' => $value,
