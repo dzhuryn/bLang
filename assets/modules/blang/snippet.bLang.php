@@ -99,7 +99,8 @@ switch ($type) {
         $listItems = '';
         foreach ($languages as $key => $lang) {
             $url = $modx->getConfig('_' . $lang . '_url');
-            $title = !empty($modx->getConfig('_' . $lang . '_title')) ? $modx->getConfig('__' . $lang . '_title') : $lang;
+            $title = !empty($modx->getConfig('__' . $lang . '_title')) ? $modx->getConfig('__' . $lang . '_title') : $lang;
+
 
             $class = ' lang-item';
             if ($lang == $activeLang) {
