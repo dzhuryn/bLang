@@ -283,6 +283,7 @@ class bLang
 
         $this->config = $config;
         foreach ($config as $key => $value) {
+            if (isset($this->modx->config['_'.$key])) continue;
             $this->modx->config['_'.$key] = $value;
 
         }
