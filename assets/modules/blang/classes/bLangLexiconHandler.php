@@ -1,11 +1,7 @@
 <?php namespace bLang;
 use Helpers\Lexicon\AbstractLexiconHandler;
 
-
-$AbstractLexiconHandlerFile = MODX_BASE_PATH.'assets/snippets/FormLister/lib/LexiconHandlers/AbstractLexiconHandler.php';
-if(file_exists($AbstractLexiconHandlerFile)){
-require_once $AbstractLexiconHandlerFile;
-
+include_once(MODX_BASE_PATH . 'assets/snippets/FormLister/__autoload.php');
 /**
  * Class EvoBabelLexiconHandler
  */
@@ -32,6 +28,4 @@ class bLangLexiconHandler extends AbstractLexiconHandler
 
         return $out;
     }
-}
-
 }
