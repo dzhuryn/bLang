@@ -1,0 +1,5 @@
+{
+    "require": {
+        "itpanda-llc/yandex-translate-sdk": "dev-master"
+    }
+}
