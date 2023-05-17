@@ -220,7 +220,7 @@ class bLang
 
     }
 
-    private final function __clone()
+    private function __clone()
     {
         throw new Exception('Clone is not allowed on singleton (LANG).');
     }
