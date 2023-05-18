@@ -232,7 +232,10 @@ class bLang
 
         if ($this->modx->isBackend() === false) {
             $config['lang'] = $this->lang;
+        } else {
+            return;
         }
+        
         $config['root'] = $this->root;
         $config['suffix'] = $this->suffix;
 
@@ -258,7 +261,6 @@ class bLang
                 $this->lexicon[ $key] = $value;
             }
         }
-
 
         $q = $this->modx->db->query("select * from ".$this->modx->getFullTableName('blang'));
         $res = $this->modx->db->makeArray($q);
