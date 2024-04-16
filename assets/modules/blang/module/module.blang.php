@@ -20,13 +20,13 @@ include_once(MODX_BASE_PATH . 'assets/modules/blang/module/actions/settings.php'
 $action = isset($_GET['action'])?$_GET['action']:'home';
 $moduleurl = 'index.php?a=112&id=' . $_GET['id'] . '&';
 $modulePath = MODX_BASE_PATH . 'assets/modules/blang/module/';
-
+$csrf = csrf_token();
 $tpl = DLTemplate::getInstance($modx);
 $tpl->setTemplatePath('assets/modules/blang/module/templates/');
 $tpl->setTemplateExtension('tpl');
 
 $bLang =  bLang::GetInstance($modx);
-$bLangModuleObj = new bLangModule($modx,$modulePath,$moduleurl);
+$bLangModuleObj = new bLangModule($modx,$modulePath,$moduleurl,$csrf);
 
 $bLangTranslate = new translate($modx,$bLang);
 
@@ -41,7 +41,8 @@ $data = [
     'manager_theme' => $modx->config['manager_theme'],
     'action' => $action,
     'stay.'.$_SESSION['stay'] => 'selected',
-    'selected' => [$action => 'selected']
+    'selected' => [$action => 'selected'],
+	'csrf' => $csrf
 ];
 $output = '';
 $moduleLang = $bLangModuleObj->getModuleLang();
@@ -165,7 +166,7 @@ switch ($action) {
         $bLangParamsObj->checkUpdatePossibilityInAction();;
         $bLangModuleObj->createDefaultParams();
         $bLangParamsObj->updateTV();
-        $modx->sendRedirect($moduleurl.'action=params');
+        $modx->sendRedirect($moduleurl.'action=params&_token='.$csrf);
         break;
 
     case 'paramForm':
