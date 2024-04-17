@@ -4,7 +4,7 @@
         <div class="row">
 
             <form action="[+moduleurl+]action=settings" id="settings-form" class="col-md-8" method="post">
-<input type="hidden" name="_token" value="[+csrf+]">
+            <input type="hidden" name="_token" value="[+csrf+]">
                 <div id="actions">
 
                     <div class="btn-group">

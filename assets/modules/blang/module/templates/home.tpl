@@ -43,7 +43,7 @@
 								   multiselect:true,
 
 								   url: "[+moduleurl+]action=getVocabulary&_token=[+csrf+]",
-								   save: "[+moduleurl+]action=saveVocabulary"
+								   save: "[+moduleurl+]action=saveVocabulary&_token=[+csrf+]"
 								   });
 
 		$(document).on('click','.add-item',function () {
