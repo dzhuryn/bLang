@@ -8,6 +8,7 @@ class bLangModule
     private $modx;
     private $bLang;
     public $_lang;
+    public $csrf;
 
     public $modulePath;
     public $moduleurl;
@@ -35,12 +36,13 @@ class bLangModule
      * @param $modulePath
      * @param $moduleurl
      */
-    public function __construct($modx, $modulePath, $moduleurl)
+    public function __construct($modx, $modulePath, $moduleurl,$csrf)
     {
         $this->modx = $modx;
         $this->bLang = bLang::GetInstance($modx);
         $this->modulePath = $modulePath;
         $this->moduleurl = $moduleurl;
+        $this->csrf = $csrf;
 
         $this->loadModuleLang();;
 

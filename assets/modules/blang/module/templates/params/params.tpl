@@ -12,10 +12,11 @@
     <ul id="blang_tmplvars">[+paramGroups+]</ul>
 
     <script>
+		const token = '[+csrf+]';
         var moduleurl = '[+moduleurl+]';
 
         function paramDefault() {
-            var action  = moduleurl+'action=createDefaultParams';
+            var action = moduleurl+'action=createDefaultParams&_token=' + token;
             if (confirm('Are you sure you want to save this thing into the database?')) {
                 action+= "&template=all"
             }

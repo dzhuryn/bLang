@@ -100,7 +100,9 @@ switch ($e->name) {
         break;
     case 'OnDocFormSave':
         $docId = $params['id'];
-
+        if (!empty($docId)  and $settings['translate']) {
+            $bLangTranslate->translateDoc($docId);
+        };
 
         break;
 }

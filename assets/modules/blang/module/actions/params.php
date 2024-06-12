@@ -36,7 +36,8 @@ class params
             'manager_theme' => $modx->config['manager_theme'],
             'action' => isset($_GET['action'])?$_GET['action']:'home',
             'stay.'.$_SESSION['stay'] => 'selected',
-            'selected' => [isset($_GET['action'])?$_GET['action']:'home' => 'selected']
+            'selected' => [isset($_GET['action'])?$_GET['action']:'home' => 'selected'],
+			'csrf' => csrf_token()
         ];
         foreach ($this->bLangModuleObj->_lang as $key => $value) {
             $this->data['_'.$key] = $value;

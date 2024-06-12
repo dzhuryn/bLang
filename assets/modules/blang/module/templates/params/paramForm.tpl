@@ -7,7 +7,7 @@
 
     -->
     <div class="container container-body">
-        <form action="[+moduleurl+]action=paramForm[[if? &is=`[+id+]:!empty` &then=`&param=[+id+]`]]" id="form" method="post">
+        <form action="[+moduleurl+]action=paramForm[[if? &is='[+id+]:!empty' &then='&param=[+id+]']]&_token=[+csrf+]" id="form" method="post">
 
 
             <div id="actions">
@@ -146,6 +146,7 @@
 
 
     <script type="text/javascript">
+		const token = '[+csrf+]';
         if (!evo) {
             var evo = {};
         }
